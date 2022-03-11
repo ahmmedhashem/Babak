@@ -1,0 +1,126 @@
+$imgheight: 569px;
+$line-size: 1px;
+$delay1: .5s;
+$delay2: .9s;
+$distance: -1px;
+$textColor: #000;
+
+h2,h3,h4,h5,h6{
+  font-family: Roboto;
+  font-style: normal;
+  color: $textColor;
+}
+p,span{
+  font-family: Roboto;
+  font-style: normal;
+  color: $textColor;
+}
+a,button{
+  font-family: Roboto;
+  font-style: normal;
+  color: $textColor;
+}
+li{
+  font-family: Roboto;
+  font-style: normal;
+  color: $textColor;
+}
+span{
+  font-family: Roboto;
+  font-style: normal;
+}
+label,input,select{
+  font-family: Roboto;
+  font-style: normal;
+}
+::placeholder{
+  font-family: Roboto;
+  font-style: normal;
+  color: $textColor;
+}
+input,button,textarea{
+  &:hover,&:focus{
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+
+.team{
+  .slider-cont{
+      .owl-nav{
+        position: absolute;
+        top: -90px;
+        right: -9px;
+        animation: slideInLeft;
+        animation-duration: 2s;
+        .owl-next,.owl-prev{
+          background: unset;
+          .car-button-left{
+            width: 55px;
+            height: 55px;
+            background: #f7941d;
+            padding: 17px;
+            position: relative;
+            border-radius: 2px;
+            img{
+              width: 44%;
+            }
+          }
+          .car-button-right{
+            @extend .car-button-left;
+            transform: rotate(180deg);
+          }
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: unset;
+            color: unset;
+        }
+      }
+
+  }
+}
+.slide{
+  .owl-stage{
+    height: 975px;
+    .owl-item{
+      height: 100%;
+      img{
+        height: 100%;
+      }
+    }
+  }
+  .owl-nav{
+    display: none;
+  }
+  .owl-dots {
+    position: absolute;
+    z-index: 99;
+    bottom: 10px;
+    left: 48%;
+    .owl-dot{
+      span{
+        width: 30px;
+        height: 3px;
+      }
+    }
+  }
+  .owl-dots{
+    .owl-dot{
+      span{
+        background: #f6941d;
+      }
+      &:hover{
+        span{
+          background: #2cb674;
+        }
+      }
+    }
+    .owl-dot.active{
+      span{
+        background: #2cb674;
+      }
+    }
+  }
+}
+
